@@ -161,6 +161,36 @@
       background-color: #333;
       color: white;
     }
+
+
+    body::before {
+  content: "Budzi się do życia...";
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 80px;
+  font-weight: bold;
+  color: black;
+  opacity: 0.08;
+  transform: rotate(-5deg);
+  white-space: nowrap;
+  z-index: -1;
+}
+
+body::after {
+  content: "Miasto Nowy Sącz...";
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  font-size: 80px;
+  font-weight: bold;
+  color: black;
+  opacity: 0.08;
+  transform: rotate(5deg);
+  white-space: nowrap;
+  z-index: -1;
+}
+
   </style>
 </head>
 <body>
@@ -256,6 +286,7 @@
   </script>
 </body>
 </html>
+
 
 
 
