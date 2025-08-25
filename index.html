@@ -75,38 +75,46 @@
     }
 
     /* PANEL WYSUWANY */
-    .panel {
-      position: fixed;
-      bottom: 20px;
-      right: -180px;
-      width: 200px;
-      background-color: black;
-      color: white;
-      border-radius: 10px 0 0 10px;
-      padding: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: right 0.3s;
-    }
-    .panel:hover {
-      right: 0;
-    }
-    .panel h3 {
-      font-size: 16px;
-      margin: 0 0 10px 0;
-    }
-    .panel a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 5px 0;
-      padding: 5px;
-      background-color: rgba(128, 128, 128, 0.452);
-      border-radius: 5px;
-      transition: background 0.2s;
-    }
-    .panel a:hover {
-      background-color: #2e2e2ec9;
-    }
+ .panel {
+  position: fixed;
+  bottom: 20px;
+  right: -220px;
+  width: 240px;
+  background: #000; /* czarne tło */
+  color: white;
+  border-radius: 16px 0 0 16px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  transition: right 0.4s ease;
+  font-family: Arial, sans-serif;
+}
+.panel:hover {
+  right: 0;
+}
+.panel h3 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 5px;
+}
+.panel a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #111; /* ciemniejszy czarny dla kontrastu */
+  transition: all 0.3s ease;
+}
+.panel a:hover {
+  background: #222;
+  transform: translateX(-5px);
+}
 
     /* ACCORDION */
     .accordion {
@@ -289,6 +297,7 @@ body::after {
   </script>
 </body>
 </html>
+
 
 
 
