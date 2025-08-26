@@ -117,58 +117,75 @@
 }
 
     /* ACCORDION */
-    .accordion {
-      width: 80%;
-      max-width: 700px;
-      margin-bottom: 40px;
-    }
-    .accordion-button {
-      background-color: #000000;
-      color: white;
-      cursor: pointer;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 18px;
-      border-radius: 5px;
-      margin-bottom: 5px;
-      transition: background 0.2s;
-    }
-    .accordion-button:hover {
-      background-color: #555;
-    }
-    .accordion-content {
-      background-color: white;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      border-radius: 0 0 5px 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      padding: 0 15px;
-    }
-    .accordion-content ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .accordion-content li {
-      padding: 5px 0;
-      border-bottom: 1px solid #ddd;
-    }
-    .accordion-content table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .accordion-content th, .accordion-content td {
-      border: 1px solid #ddd;
-      padding: 5px;
-      text-align: center;
-    }
-    .accordion-content th {
-      background-color: #333;
-      color: white;
-    }
+   .accordion {
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.accordion-button {
+  background: #111;                /* ciemne tło */
+  color: #fff;                     /* biały tekst */
+  cursor: pointer;
+  padding: 14px 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 12px;             /* większe zaokrąglenie */
+  margin-bottom: 8px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.accordion-button:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.accordion-content {
+  background: #1a1a1a;             /* ciemne tło wnętrza */
+  color: #eee;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  padding: 0 15px;
+  margin-bottom: 12px;             /* 🔥 odstęp pod rozwiniętym okienkiem */
+}
+
+
+.accordion-content ul {
+  list-style: none;
+  padding: 12px 0;
+  margin: 0;
+}
+
+.accordion-content li {
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
+}
+
+.accordion-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  color: #fff;
+}
+
+.accordion-content th, .accordion-content td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+.accordion-content th {
+  background: #000;
+  color: #fff;
+}
 
 
     body::before {
@@ -208,13 +225,13 @@ body::after {
   </header>
 
   <!-- LICZNIK -->
-  <div class="licznik">5714 / 7433</div>
-  <div class="aktualizacja-czas">Ostatnia aktualizacja: 26 sierpnia 2025, 11:00</div>
+  <div class="licznik">5743 / 7433</div>
+  <div class="aktualizacja-czas">Ostatnia aktualizacja: 26 sierpnia 2025, 11:45</div>
 
   <!-- WOLNE MIEJSCA -->
   <div class="wolne-miejsca">
     <strong>Wolne miejsca na stadionie:</strong>
-    Trybuna A: 661 | Trybuna B: 347 | Trybuna C (Rodzinny): 4 | Trybuna D (Młyn): 707
+    Trybuna A: 653 | Trybuna B: 333 | Trybuna C (Rodzinny): 0 | Trybuna D (Młyn): 704
   </div>
 
   <!-- AKTUALIZACJE TEKSTOWE -->
@@ -302,6 +319,7 @@ body::after {
   </script>
 </body>
 </html>
+
 
 
 
