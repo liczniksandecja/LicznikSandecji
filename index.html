@@ -283,8 +283,49 @@ Trybuna A: - | Trybuna B: - | Trybuna C (Rodzinna): - | Trybuna D (Młyn): -
       });
     });
   </script>
+
+  <!-- Baner cookies -->
+<div id="cookie-banner" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 1000;
+">
+  Ta strona korzysta z Google Analytics (pliki cookies) do zbierania anonimowych danych o ruchu.
+  <button id="accept-cookies" style="
+    margin-left: 15px;
+    padding: 5px 15px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  ">
+    Akceptuję
+  </button>
+</div>
+
+<script>
+  // Sprawdzenie czy już zaakceptowano
+  if (localStorage.getItem("cookiesAccepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  document.getElementById("accept-cookies").addEventListener("click", function() {
+    localStorage.setItem("cookiesAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
