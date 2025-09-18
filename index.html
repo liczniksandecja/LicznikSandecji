@@ -20,11 +20,41 @@ function toggleMenu() {
 }
 </script>
 
+  <script>
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+
+      // schowaj wszystkie sekcje
+      document.querySelectorAll("#o-mnie, #kontakt").forEach(sec => {
+        sec.style.display = "none";
+      });
+
+      // pokaż tylko klikniętą
+      target.style.display = "block";
+    });
+  });
+</script>
+
+
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aktualizacje biletów - Sandecja</title>
   <style>
+
+    #o-mnie, #kontakt {
+  display: none; /* ukryte domyślnie */
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
 
     #o-mnie, #kontakt {
   width: 80%;
@@ -408,6 +438,7 @@ Trybuna A: - | Trybuna B: - | Trybuna C (Rodzinna): - | Trybuna D (Młyn): -
 
 </body>
 </html>
+
 
 
 
