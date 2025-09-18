@@ -20,25 +20,6 @@ function toggleMenu() {
 }
 </script>
 
-  <script>
-  document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute("href"));
-
-      // schowaj wszystkie sekcje
-      document.querySelectorAll("#o-mnie, #kontakt").forEach(sec => {
-        sec.style.display = "none";
-      });
-
-      // pokaż tylko klikniętą
-      target.style.display = "block";
-    });
-  });
-</script>
-
-
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aktualizacje biletów - Sandecja</title>
@@ -311,6 +292,12 @@ function toggleMenu() {
     <!-- Hamburger menu -->
    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
+
+  <div id="menu" class="menu">
+  <a href="#o-mnie">ℹ️ O mnie</a>
+  <a href="#kontakt">📩 Kontakt</a>
+</div>
+
   
 <div id="o-mnie">
   <h2>ℹ️ O mnie</h2>
@@ -436,8 +423,29 @@ Trybuna A: - | Trybuna B: - | Trybuna C (Rodzinna): - | Trybuna D (Młyn): -
   });
 </script>
 
+  <script>
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+
+      // schowaj wszystkie sekcje
+      document.querySelectorAll("#o-mnie, #kontakt").forEach(sec => {
+        sec.style.display = "none";
+      });
+
+      // pokaż tylko klikniętą
+      target.style.display = "block";
+
+      // schowaj menu po kliknięciu
+      document.getElementById("menu").style.display = "none";
+    });
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
