@@ -25,6 +25,17 @@ function toggleMenu() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aktualizacje biletów - Sandecja</title>
   <style>
+
+    #o-mnie, #kontakt {
+  width: 80%;
+  margin: 20px auto; /* wyśrodkowanie i odstęp */
+  padding: 20px;
+  background: #111; /* ciemne tło */
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
     .hamburger {
   position: absolute;
   top: 20px;
@@ -271,23 +282,20 @@ function toggleMenu() {
    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
   
-  <div id="o-mnie" style="padding:40px; background:#111; color:#fff;">
+<div id="o-mnie">
   <h2>ℹ️ O mnie</h2>
   <p>
-   Jestem kibicem Sandecji Nowy Sącz, z okazji otwarcia nowego stadionu postanowiłem otworzyć w pełni amatorskie i fanowskie konto,
-   które będzie informować kibiców o liczbie sprzedanych biletów na mecze Sączersów.
+    Jestem kibicem Sandecji Nowy Sącz. Z okazji otwarcia nowego stadionu
+    postanowiłem stworzyć amatorską stronę dla fanów, która pokazuje
+    licznik sprzedanych biletów i inne aktualności.
   </p>
 </div>
 
-    
-  <div id="kontakt" style="padding:40px; background:#222; color:#fff;">
+<div id="kontakt">
   <h2>📩 Kontakt</h2>
   <p>
     Masz pytania lub pomysł na rozwój strony?  
-    Napisz do mnie:  
-    <a href="mailto:twojemail@gmail.com" style="color:#fff; text-decoration:underline;">
-      licznkinsandecja@gmail.com
-    </a>
+    Napisz do mnie: <a href="mailto:liczniksandecja@gmail.com" style="color:#fff;">liczniksandecja@gmail.com</a>
   </p>
 </div>
 
@@ -400,6 +408,7 @@ Trybuna A: - | Trybuna B: - | Trybuna C (Rodzinna): - | Trybuna D (Młyn): -
 
 </body>
 </html>
+
 
 
 
