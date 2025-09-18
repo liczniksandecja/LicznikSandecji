@@ -281,22 +281,11 @@ function toggleMenu() {
   }
 }
 
-    .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  color: #fff;   /* biały */
-  cursor: pointer;
+  #o-mnie, #kontakt {
+  position: relative; /* <-- potrzebne dla krzyżyka */
 }
 
-.close-btn:hover {
-  color: #ccc;   /* delikatne rozjaśnienie przy najechaniu */
-}
-
-    .close-btn {
+.close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -305,6 +294,10 @@ function toggleMenu() {
   font-size: 28px;
   color: #fff;
   cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ccc;
 }
 
 
@@ -337,7 +330,7 @@ function toggleMenu() {
 </div>
 
 <div id="kontakt">
-  <button class="close-btn" onclick="zamknijOkienko('o-mnie')">✖</button>
+  <button class="close-btn" onclick="zamknijOkienko('kontakt')">✖</button>
   <h2>📩 Kontakt</h2>
   <p>
     Masz pytania lub pomysł na rozwój strony?  
@@ -489,6 +482,7 @@ document.querySelectorAll(".close-btn").forEach(btn => {
 
 </body>
 </html>
+
 
 
 
