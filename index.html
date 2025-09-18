@@ -296,6 +296,17 @@ function toggleMenu() {
   color: #ccc;   /* delikatne rozjaśnienie przy najechaniu */
 }
 
+    .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 
   </style>
@@ -316,7 +327,7 @@ function toggleMenu() {
 
   
 <div id="o-mnie">
-  <button class="close-btn">✖</button>
+  <button class="close-btn" onclick="zamknijOkienko('o-mnie')">✖</button>
   <h2>ℹ️ O mnie</h2>
   <p>
     Jestem kibicem Sandecji Nowy Sącz. Z okazji otwarcia nowego stadionu
@@ -326,7 +337,7 @@ function toggleMenu() {
 </div>
 
 <div id="kontakt">
-  <button class="close-btn">✖</button>
+  <button class="close-btn" onclick="zamknijOkienko('o-mnie')">✖</button>
   <h2>📩 Kontakt</h2>
   <p>
     Masz pytania lub pomysł na rozwój strony?  
@@ -467,11 +478,18 @@ document.querySelectorAll(".close-btn").forEach(btn => {
     btn.parentElement.style.display = "none";
   });
 });
+    function zamknijOkienko(id) {
+  document.getElementById(id).style.display = "none";
+}
+
 </script>
+
+
 
 
 </body>
 </html>
+
 
 
 
